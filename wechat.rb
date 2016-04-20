@@ -12,8 +12,8 @@ class Wechat
   extend Forwardable
   def_delegators :wc, :is_valid?
 
-  def initialize(coprid, corpsecret, appid)
-    @wc = QyWechatApi::Client.new(coprid, corpsecret)
+  def initialize(corpid, corpsecret, appid)
+    @wc = QyWechatApi::Client.new(corpid, corpsecret)
     @appid = appid
     raise "cannot connect wechat server with your message" unless is_valid?
   end

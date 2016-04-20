@@ -16,8 +16,8 @@ error WechatError do
 end
 
 before do
-  error!("params missing") unless params[:coprid] && params[:corpsecret] && params[:appid]
-  init_wechat_client(params[:coprid], params[:corpsecret], params[:appid])
+  error!("params missing") unless params[:corpid] && params[:corpsecret] && params[:appid]
+  init_wechat_client(params[:corpid], params[:corpsecret], params[:appid])
 end
 
 # 发送文本信息
