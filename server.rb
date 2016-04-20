@@ -37,7 +37,7 @@ helpers do
   end
 
   def error_message(msg)
-    present({ status: 0, msg: msg })
+    render_json({ status: 0, msg: msg })
   end
 
   def present(msg)
